@@ -1,11 +1,12 @@
 "Taran vimrc
-set nocompatible
 
 set background=dark
-colorscheme slate
-"let g:solarized_termtrans=1
+colorscheme solarized 
+let g:solarized_termtrans=1
 "let g:molokai_original=1
 "colorscheme molokai
+
+set nocompatible
 " Turn on syntax highlighting.
 syntax on
 
