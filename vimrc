@@ -1,8 +1,9 @@
 "Taran vimrc
 
 set background=dark
+let g:solarized_termcolors=256
 colorscheme solarized 
-let g:solarized_termtrans=1
+let g:solarized_termtrans=5
 "let g:molokai_original=1
 "colorscheme molokai
 
@@ -64,10 +65,10 @@ nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up>    :echoe "Use k"<CR>
 nnoremap <Down>  :echoe "Use j"<CR>
 " ...and in insert mode
-inoremap <Left>  <ESC>:echoe "Use h"<CR>
-inoremap <Right> <ESC>:echoe "Use l"<CR>
-inoremap <Up>    <ESC>:echoe "Use k"<CR>
-inoremap <Down>  <ESC>:echoe "Use j"<CR>
+"inoremap <Left>  <ESC>:echoe "Use h"<CR>
+"inoremap <Right> <ESC>:echoe "Use l"<CR>
+"inoremap <Up>    <ESC>:echoe "Use k"<CR>
+"inoremap <Down>  <ESC>:echoe "Use j"<CR>
 
 "autocomplete for commande menu
 set wildmenu
@@ -86,3 +87,8 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+
+" nerdtree
+nnoremap <Leader>n :NERDTreeToggle<CR>
+nnoremap <Leader>f :NERDTreeFind<CR>
