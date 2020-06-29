@@ -19,6 +19,8 @@ set number
 
 set relativenumber
 
+filetype plugin indent on " enable file type detection
+set autoindent
 " Always show the status line at the bottom, even if you only have one window open.
 set laststatus=2
 
@@ -79,16 +81,51 @@ set linebreak 	" line wrap
 set hls 	"highlighjt search
 
 "SYNTASTIC
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
 
 
 " nerdtree
 nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>f :NERDTreeFind<CR>
+
+
+set splitbelow
+set splitright
+
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
+
+au BufNewFile,BufRead *.py
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
+
+au BufNewFile,BufRead *.js, *.html, *.css
+    \ set tabstop=2
+    \ set softtabstop=2
+    \ set shiftwidth=2
+
+set encoding=utf-8
+
+let python_highlight_all=1
+
+set clipboard=unnamed
+
+highlight SignColumn ctermbg=234
+highlight StatusLine cterm=bold ctermfg=245 ctermbg=235
+highlight StatusLineNC cterm=bold ctermfg=245 ctermbg=235
+
+highlight SpellBad cterm=underline
+
