@@ -1,0 +1,26 @@
+
+#### Build Vim from source on mac with python3
+
+*  requirements
+ xcode-select --install
+
+ cd ~
+ git clone https://github.com/vim/vim.git
+ cd vim
+
+cd src
+make distclean 
+./configure \
+	--with-features=huge\
+    --enable-multibyte \
+    --enable-python3interp=yes \
+    --with-python3-config-dir=$(python3-config --configdir) \
+    --enable-cscope \
+    --enable-gui=auto \
+    --enable-largefile \
+    --enable-fail-if-missing\
+    --disable-netbeans \
+    --prefix=/usr/local
+ 
+make
+sudo make install    
