@@ -8,8 +8,8 @@ venvDir=$srcDir/venv
 
 
 #create env
-python3 -m venv $venv_dir || exit$?
-source $venv_dir/bin/activate || exit $?
+python3 -m venv $venvDir || exit$?
+source $venvDir/bin/activate || exit $?
 
 pip3 install numpy scipy matplotlib ipython jupyter pandas
 
